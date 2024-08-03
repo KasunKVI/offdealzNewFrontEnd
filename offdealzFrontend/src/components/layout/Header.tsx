@@ -288,7 +288,7 @@ export default function NavBar() {
                                 </button>
 
                                 {/* Logo */}
-                                <div className="ml-4 flex lg:ml-0">
+                                <div className="ml-32 flex lg:ml-0">
                                     <a href="#">
                                         <span className="sr-only">Your Company</span>
                                         <img
