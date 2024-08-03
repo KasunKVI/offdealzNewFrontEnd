@@ -2,25 +2,12 @@ import { useState, useEffect } from 'react';
 import images from "../../assets/constants/images.js";
 
 const slides = [
-    {
-        url: images.BannerImage1,
-    },
-    {
-        url: images.BannerImage2,
-    },
-    {
-        url: images.BannerImage5,
-    },
-    {
-        url: images.BannerImage6,
-    },
-    {
-        url: images.BannerImage7,
-    },
-    {
-        url: images.BannerImage8,
-    }
-
+    { url: images.BannerImage1 },
+    { url: images.BannerImage2 },
+    { url: images.BannerImage5 },
+    { url: images.BannerImage6 },
+    { url: images.BannerImage7 },
+    { url: images.BannerImage8 }
 ];
 
 const MainSlideBanner = () => {
@@ -40,8 +27,8 @@ const MainSlideBanner = () => {
     }, []);
 
     return (
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto py-4">
-            <div className="relative w-full h-64 overflow-hidden rounded-3xl z-10">
+        <div className="max-w-7xl px-6 mx-auto py-4">
+            <div className="relative w-full h-80 overflow-hidden rounded-3xl z-10">
                 <div
                     className="flex transition-transform duration-1000"
                     style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -49,7 +36,7 @@ const MainSlideBanner = () => {
                     {slides.map((slide, index) => (
                         <div
                             key={index}
-                            className="w-full h-64 flex-shrink-0"
+                            className="w-full h-80 flex-shrink-0 "
                             style={{ backgroundImage: `url(${slide.url})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                         >
                             <div className="w-full h-full flex items-center justify-center">
